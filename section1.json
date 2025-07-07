@@ -1,0 +1,601 @@
+[
+    {
+        "question": "Choose the correct syntax to add a new host named “emailserver1” with IP address 10.50.23.90 using GAIA Management CLI?",
+        "options": [
+            "A. mgmt._cli add host name “emailserver1” ip-address 10.50.23.90",
+            "B. mgmt._cli add host “emailserver1” address 10.50.23.90",
+            "C. mgmt._cli add host name “myHost12 ip” address 10.50.23.90",
+            "D. mgmt._cli add host name ip-address 10.50.23.90"
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 1
+    },
+    {
+        "question": "Which method below is NOT one of the ways to communicate using the Management API's?",
+        "options": [
+            "A. Typing API commands using Gaia's secure shell (clish)",
+            "B. Typing API commands from a dialog box inside the SmartConsole GUI application",
+            "C. Sending API commands over an http connection using web-services",
+            "D. Typing API commands using the “mgmt._cli” command"
+        ],
+        "answer": 2,
+        "explanation": "C (86%) 14%",
+        "id": 2
+    },
+    {
+        "question": "Which of the following is NOT a type of Check Point API available in R80.x?",
+        "options": [
+            "A. Identity Awareness Web Services",
+            "B. OPSEC SDK",
+            "C. Management",
+            "D. Mobile Access"
+        ],
+        "answer": 3,
+        "explanation": "D (56%) B (44%",
+        "id": 3
+    },
+    {
+        "question": "What API command below creates a new host object with the name “My Host” and IP address of “192.168.0.10\"?",
+        "options": [
+            "A. set host name “My Host” ip-address “192.168.0.10”",
+            "B. create host name “My Host” ip-address “192.168.0.10”",
+            "C. new host name “My Host” ip-address “192.168.0.10”",
+            "D. mgmt_cli -m <mgmt ip> add host name “My Host” ip-address “192.168.0.10”"
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 4
+    },
+    {
+        "question": "What command verifies that the API server is responding?",
+        "options": [
+            "A. api stat",
+            "B. show api_status",
+            "C. api_get_status",
+            "D. api status"
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 5
+    },
+    {
+        "question": "What are the different command sources that allow you to communicate with the API server?",
+        "options": [
+            "A. AP|_cli Tool, Gaia CLI, Web Services",
+            "B. SmartConsole GUI Console, API_cli Tool, Gaia CLI, Web Services",
+            "C. SmartView Monitor, API_cli Tool, Gaia CLI, Web Services",
+            "D. SmartConsole GU! Console, mgmt._cli Tool, Gaia CLI, Web Services"
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 6
+    },
+    {
+        "question": "Alice works for a big security outsourcing provider company and as she receives a lot of change requests per day she wants to use for scripting daily tasks the API services from Check Point for the Management API. Firstly, she needs to be aware if the API services are running for the management. Which of the following Check Point Command is true:",
+        "options": [
+            "A. status mgmt api",
+            "B. api mgmt status.",
+            "C. status api",
+            "D. api status"
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 7
+    },
+    {
+        "question": "What is correct statement about Security Gateway and Security Management Server failover in Check Point R81.X in terms of Check Point Redundancy driven solutions?",
+        "options": [
+            "A. Security Gateway failover as well as Security Management Server failover is an automatic procedure.",
+            "B. Security Gateway failover is an automatic procedure but Security Management Server failover is a manual procedure.",
+            "C. Security Gateway failover is a manual procedure but Security Management Server failover is an automatic procedure.",
+            "D. Security Gateway failover as well as Security Management Server failover is a manual procedure."
+        ],
+        "answer": 1,
+        "explanation": "B (88%)"
+    },
+    {
+        "question": "What is the most ideal Synchronization Status for Security Management Server High Availability deployment?",
+        "options": [
+            "A. Never been synchronized",
+            "B. Collision",
+            "C. Synchronized",
+            "D. Lagging"
+        ],
+        "answer": 2,
+        "explanation": "C (83%) B (17%)",
+        "id": 9
+    },
+    {
+        "question": "What state is the Management HA in when both members have different policies/databases?",
+        "options": [
+            "A. Lagging",
+            "B. Never been synchronized",
+            "C. Collision",
+            "D. Synchronized"
+        ],
+        "answer": 2,
+        "explanation": "C (100%)",
+        "id": 10
+    },
+    {
+        "question": "You are asked to check the status of several user-mode processes on the management server and gateway. Which of the following processes can only be seen on a Management Server?",
+        "options": [
+            "A. cpd",
+            "B. fwd",
+            "C. cpwd",
+            "D. fwm"
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 11
+    },
+    {
+        "question": "What is the command used to activate Multi-Version Cluster mode?",
+        "options": [
+            "A. set mvc on in Clish",
+            "B. set cluster member mvc on in Clish",
+            "C. set cluster mvc on in Expert Mode",
+            "D. set cluster MVC on in Expert Mode"
+        ],
+        "answer": 1,
+        "explanation": "B (100%)",
+        "id": 12
+    },
+    {
+        "question": "How many versions, besides the destination version, are supported in a Multi-Version Cluster Upgrade?",
+        "options": [
+            "A. 4",
+            "B. 3",
+            "C. 2",
+            "D. 1"
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 13
+    },
+    {
+        "question": "Which upgrade method you should use upgrading from R80.40 to R81.20 to avoid any downtime?",
+        "options": [
+            "A. Multi-Version Cluster Upgrade (MVC)",
+            "B. Zero Downtime Upgrade (ZDU)",
+            "C. Connectivity Upgrade (CU)",
+            "D. Minimal Effort Upgrade (ME)"
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 14
+    },
+    {
+        "question": "What are the main stages of a policy installation?",
+        "options": [
+            "A. Initiation, Conversion and Save",
+            "B. Initiation, Conversion and FWD REXEC",
+            "C. Verification, Commit, Installation",
+            "D. Verification, Compilation, Transfer and Commit"
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 15
+    },
+    {
+        "question": "What are valid Policy Types in R81.X?",
+        "options": [
+            "A. Access Control, Threat Prevention, QoS, Desktop Security",
+            "B. Access Control, IPS, Threat Emulation, NAT",
+            "C. Access Control, IPS, QoS, DLP",
+            "D. Access Control, RemoteAccess VPN, NAT, IPS"
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 16
+    },
+    {
+        "question": "After some changes in the firewall policy, you run into some issues. You want to test if the policy from two weeks ago has the same issue. You don't want to lose the changes from the last weeks. What is the best way to do it?",
+        "options": [
+            "A. In SmartConsole under Security Policies go to the Installation History view of the Gateway, select the policy version from two weeks",
+            "B. Use the Gaia WebUI to take a backup of the Gateway. In SmartConsole under Security Policies go to the Installation History view of the",
+            "C. In SmartConsole under Manage & Settings go to Sessions -> Revisions and select the revision from two weeks ago. Run the action",
+            "D. Use the Gaia WebUI to take a snapshot of management. In the In SmartConsole under Manage & Settings go to Sessions -> Revisions"
+        ],
+        "answer": 0,
+        "explanation": "A (46%) C (38%) B (15%)",
+        "id": 17
+    },
+    {
+       "question": "Which Check Point process provides logging services, such as forwarding logs from Gateway to Log Server, providing Log Export API (LEA) & Event Logging API (ELA) services.",
+        "options": [
+            "A. DASSERVICE",
+            "B. FWD",
+            "C. CPVIEWD",
+            "D. CPD"
+        ],
+        "answer": 1,
+        "explanation": "B (88%)",
+        "id": 18
+    },
+    {
+        "question": "The back-end database for Check Point Management uses:",
+        "options": [
+            "A. PostgreSQL",
+            "B. MongoDB",
+            "C. MySQL",
+            "D. DBMS"
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 19
+    },
+    {
+        "question": "Where can you see and search records of action done by R80 SmartConsole administrators?",
+        "options": [
+            "A. In SmartAudit Log View",
+            "B. In Smartlog, all logs",
+            "C. In the Logs & Monitor, logs, select “Audit Log View”",
+            "D. In SmartView Tracker, open active log"
+        ],
+        "answer": 2,
+        "explanation": "C (100%)",
+        "id": 20
+    },
+    {
+        "question": "Identity Awareness allows the Security Administrator to configure network access based on which of the following?",
+        "options": [
+            "A. Name of the application, identity of the user, and identity of the machine",
+            "B. Identity of the machine, username, and certificate",
+            "C. Browser-Based Authentication, identity of a user, and network location",
+            "D. Network location, identity of a user, and identity of a machine"
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 21
+    },
+    {
+        "question": "While enabling the Identity Awareness blade the Identity Awareness wizard does not automatically detect the windows domain. Why does it not detect the windows domain?",
+        "options": [
+            "A. Security Gateway is not part of the Domain",
+            "B. SmartConsole machine is not part of the domain",
+            "C. Identity Awareness is not enabled on Global properties",
+            "D. Security Management Server is not part of the domain"
+        ],
+        "answer": 1,
+        "explanation": "B (100%)",
+        "id": 22
+    },
+    {
+        "question": "Which of the following is NOT a method used by Identity Awareness for acquiring identity?",
+        "options": [
+            "A. Remote Access",
+            "B. Active Directory Query",
+            "C. Cloud IdP (Identity Provider)",
+            "D. RADIUS"
+        ],
+        "answer": 2,
+        "explanation": "C (86%) 14%",
+        "id": 23
+    },
+    {
+        "question": "Identity Awareness lets an administrator easily configure network access and auditing based on three times. Choose the correct statement.",
+        "options": [
+            "A. Network location, the identity of a user and the identity of a machine.",
+            "B. Geographical location, the identity of a user and the identity of a machine.",
+            "C. Network location, the identity of a user and the active directory membership.",
+            "D. Network location, the telephone number of a user and the UID of a machine."
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 24
+    },
+    {
+        "question": "Fill in the blanks. Default port numbers for an LDAP server is for standard connections and SSL connections.",
+        "options": [
+            "A. 443; 389",
+            "B. 636; 8080",
+            "C. 290; 3389",
+            "D. 389; 636 QUE)"
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 25
+    },
+    {
+        "question": "By default, what information is NOT collected from a Security Gateway in a CPINFO?",
+        "options": [
+            "A. OS and Network Statistics",
+            "B. Configuration and database files",
+            "C. Firewall logs",
+            "D. System message logs"
+        ],
+        "answer": 2,
+        "explanation": "C (100%)",
+        "id": 26
+    },
+    {
+        "question": "What command can you use to have cpinfo display all installed hotfixes?",
+        "options": [
+            "A. cpinfo-hf",
+            "B. cpinfo installed_jumbo",
+            "C. cpinfo —get hf",
+            "D. cpinfo -y all"
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 27
+    },
+    {
+        "question": "Which command collects diagnostic data for analyzing a customer setup remotely?",
+        "options": [
+            "A. cpv",
+            "B. cpinfo",
+            "C. migrate export",
+            "D. sysinfo"
+        ],
+        "answer": 1,
+        "explanation": "B (100%)",
+        "id": 28
+    },
+    {
+        "question": "By default, what type of rules in the Access Control rulebase allow the control connections?",
+        "options": [
+            "A. Implicit Rules",
+            "B. Explicitly Implied Rules",
+            "C. Implied Rules (ERYE\")",
+            "D. Explicit Rules"
+        ],
+        "answer": 2,
+        "explanation": "C (100%)",
+        "id": 29
+    },
+    {
+        "question": "Check Point Support in many cases asks you for a configuration summary of your Check Point system. This is also called:",
+        "options": [
+            "A. sysinfo",
+            "B. cpsizeme",
+            "C. cpinfo",
+            "D. cpexport"
+        ],
+        "answer": 2,
+        "explanation": "C (100%)",
+        "id": 30
+    },
+    {
+        "question": "What is the name of the secure application for Mail/Calendar for mobile devices?",
+        "options": [
+            "A. Secure Workspace",
+            "B. Capsule Mail",
+            "C. Capsule Workspace",
+            "D. Capsule VPN"
+        ],
+        "answer": 2,
+        "explanation": "",
+        "id": 31
+    },
+    {
+        "question": "What is the difference between SSL VPN and IPSec VPN?",
+        "options": [
+            "A. SSL VPN requires installation of a resilient VPN client",
+            "B. SSL VPN and IPSec VPN are the same",
+            "C. IPSec VPN does not require installation of a resident VPN client",
+            "D. IPSec VPN requires installation of a resident VPN client and SSL VPN requires only an installed Browser"
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 32
+    },
+    {
+        "question": "Which Remote Access Client does not provide an Office-Mode Address?",
+        "options": [
+            "A. Endpoint Security Suite",
+            "B. Check Point Mobile",
+            "C. SecuRemote",
+            "D. Endpoint Security VPN"
+        ],
+        "answer": 2,
+        "explanation": "C (100%)",
+        "id": 33
+    },
+    {
+        "question": "Which feature allows Remote-access VPN users to access resources across a site-to-site VPN tunnel?",
+        "options": [
+            "A. Mobile Access VPN Domain",
+            "B. Community Specific VPN Domain",
+            "C. Remote Access VPN Switch",
+            "D. Network Access VPN Domain"
+        ],
+        "answer": 1,
+        "explanation": "B (100%)",
+        "id": 34
+    },
+    {
+        "question": "SSL Network Extender (SNX) is a thin SSL VPN on-demand client that is installed on the remote user's machine via the web browser. What are the two modes of SNX?",
+        "options": [
+            "A. Network and Layers",
+            "B. Application and Client Service",
+            "C. Network and Application",
+            "D. Virtual Adapter and Mobile App"
+        ],
+        "answer": 2,
+        "explanation": "C (100%)",
+        "id": 35
+    },
+    {
+        "question": "Which one of the following is true about Capsule Connect?",
+        "options": [
+            "A. It is a full layer 3 VPN client",
+            "B. It is supported only on iOS phones and Windows PCs",
+            "C. It offers full enterprise mobility management",
+            "D. It does not support all VPN authentication methods"
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 36
+    },
+    {
+        "question": "Which Mobile Access Application allows a secure container on Mobile devices to give users access to internal website, file share and emails?",
+        "options": [
+            "A. Check Point Capsule Workspace",
+            "B. Check Point Capsule Remote",
+            "C. Check Point Mobile Web Portal",
+            "D. Check Point Remote User"
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 37
+    },
+    {
+        "question": "Which Mobile Access Solution is clientless?",
+        "options": [
+            "A. Mobile Access Portal",
+            "B. Checkpoint Mobile",
+            "C. Endpoint Security Suite",
+            "D. SecuRemote"
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 38
+    },
+    {
+        "question": "The Log server sends what to the Correlation Unit?",
+        "options": [
+            "A. Authentication requests",
+            "B. Event Policy",
+            "C. Logs",
+            "D. CPMI dbsync"
+        ],
+        "answer": 2,
+        "explanation": "C (100%)",
+        "id": 39
+    },
+    {
+        "question": "What is the recommended configuration when the customer requires SmartLog indexing for 14 days and SmartEvent to keep events for 180 days?",
+        "options": [
+            "A. Choose different setting for log storage and SmartEvent db",
+            "B. It is not possible",
+            "C. Install Management and SmartEvent on different machines",
+            "D. Use Multi-Domain Management Server"
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 40
+    },
+    {
+        "question": "What are the two types of tests when using the Compliance blade?",
+        "options": [
+            "A. Tests conducted based on the loC XML file and analysis of SOLR documents",
+            "B. Access Control policy analysis and Threat Prevention policy analysis",
+            "C. Policy-based tests and Global properties",
+            "D. Global tests and Object-based tests"
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 41
+    },
+    {
+        "question": "Which of the following statements about SecureXL NAT Templates is true?",
+        "options": [
+            "A. NAT Templates are generated to achieve high session rate for NAT. These templates store the NAT attributes of connections matched by rulebase so that similar new connections can take advantage of this information and do NAT without the expensive rulebase lookup.These are disabled by default and work only if Accept Templates are disabled.",
+            "B. NAT Templates are generated to achieve high session rate for NAT. These templates store the NAT attributes of connections matched by rulebase so that similar new connections can take advantage of this information and do NAT without the expensive rulebase lookup. These are enabled by default and work only if Accept Templates are enabled.",
+            "C. ACCEPT Templates are generated to achieve high session rate for NAT. These templates store the NAT attributes of connections matched by rulebase so that similar new connections can take advantage of this information and do NAT without the expensive rulebase lookup. These are disabled by default and work only if NAT Templates are disabled.",
+            "D. DROP Templates are generated to achieve high session rate for NAT. These templates store the NAT attributes of connections matched by rulebase so that similar new connections can take advantage of this information and do NAT without the expensive rulebase lookup. These are disabled by default and work only if NAT Templates are disabled."
+        ],
+        "answer": 1,
+        "explanation": "B (80%) A (20%)",
+        "id": 42
+    },
+    {
+        "question": "In what way is Secure Network Distributor (SND) a relevant feature of the Security Gateway?",
+        "options": [
+            "A. SND is used to distribute packets among Firewall instances",
+            "B. SND is a feature to accelerate multiple SSL VPN connections",
+            "C. SND is a feature of fw monitor to capture accelerated packets",
+            "D. SND is an alternative to IPSec Main Mode, using only 3 packets."
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 43
+    },
+    {
+        "question": "Which statement is most correct regarding about “CoreXL Dynamic Dispatcher’?",
+        "options": [
+            "A. The CoreXL FW instances assignment mechanism is based on IP Protocol type.",
+            "B. The CoreXL FW instances assignment mechanism is based on the utilization of CPU cores",
+            "C. The CoreXL FW instances assignment mechanism is based on Source MAC addresses, Destination MAC addresses",
+            "D. The CoreXL FW instances assignment mechanism is based on Source IP addresses, Destination IP addresses, and the IP 'Protocol' type."
+        ],
+        "answer": 1,
+        "explanation": "B (100%)",
+        "id": 44
+    },
+    {
+        "question": "What kind of information would you expect to see when using the “sim affinity -I\" command?",
+        "options": [
+            "A. Overview over SecureXL templated connections",
+            "B. The VMACs used in a Security Gateway cluster",
+            "C. Affinity Distribution",
+            "D. The involved firewall kernel modules in inbound and outbound packet chain"
+        ],
+        "answer": 2,
+        "explanation": "C (100%)",
+        "id": 45
+    },
+    {
+        "question": "CoreXL is NOT supported when one of the following features is enabled:",
+        "options": [
+            "A. Overlapping NAT",
+            "B. Route-based VPN",
+            "C. IPv6",
+            "D. IPS"
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 46
+    },
+    {
+        "question": "What are the three SecureXL Templates available in R81.10?",
+        "options": [
+            "A. Accept Templates, Drop Templates, NAT Templates",
+            "B. PEP Templates, QoS Templates, VPN Templates",
+            "C. Accept Templates, PDP Templates, PEP Templates",
+            "D. Accept Templates, Drop Templates, Reject Templates"
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 47
+    },
+    {
+        "question": "What is the correct description for the Dynamic Balancing / Spit feature?",
+        "options": [
+            "A. Dynamic Balancing / Split dynamically change the number of SND's and firewall instances based on the current load. It is only available on Quantum Appliances (not on Quantum Spark or Open Server)",
+            "B. Dynamic Balancing / Split dynamically distribute the traffic from one network interface to multiple SND’s. The interface must support Multi-Queue. It is only available on Quantum Appliances (not on Quantum Spark or Open Server)",
+            "C. Dynamic Balancing / Split dynamically change the number of SND’s and firewall instances based on the current load. It is only available on Quantum Appliances and Open Server (not on Quantum Spark)",
+            "D. Dynamic Balancing / Spit dynamically distribute the traffic from one network interface to multiple SND's. The interface must support Multi-Queue. It is only available on Quantum Appliances and Open Server (not on Quantum Spark)"
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 48
+    },
+    {
+        "question": "Which statement is WRONG regarding the usage of the Central Deployment in SmartConsole?",
+        "options": [
+            "A. Only Hotfixes can be installed with the Central Deployment in SmartConsole",
+            "B. You can install Hotfixes with the Central Deployment in SmartConsole",
+            "C. You can upgrade your cluster without user intervention with the Central Deployment in SmartConsole from R80.40 to R81.20.",
+            "D. You can install Jumbo Hotfix accumulators with the Central Deployment in SmartConsole."
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 49
+    },
+    {
+        "question": "What is false regarding prerequisites for the Central Deployment usage?",
+        "options": [
+            "A. The Security Gateway must have a policy installed",
+            "B. The administrator must have write permission on SmartUpdate",
+            "C. No need to establish SIC between gateways and the management server, since the CDT tool will take care about SIC automatically",
+            "D. Security Gateway must have the latest CPUSE Deployment Agent"
+        ],
+        "answer": 2,
+        "explanation": "C (100%)",
+        "id": 50
+    }
+]

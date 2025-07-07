@@ -1,0 +1,601 @@
+[   {        
+        "question": "Which User-mode process is responsible for the FW CLI commands?",
+        "options": [
+            "A. cpm",
+            "B. cpd",
+            "C. fwm",
+            "D. fwd"
+     ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 1
+},
+    {
+        "question": "Aaron is a Cyber Security Engineer working for Global Law Firm with large scale deployment of Check Point Enterprise Appliances running GAIA R80.X. The Network Security Developer Team is having an issue testing the API with a newly deployed R80.X Security Management Server. Aaron wants to confirm API services are working properly. What should he do first?",
+        "options": [
+            "A. Aaron should check API Server status with “api status\" from Expert mode. If services are stopped, he should start them with “api start’.",
+            "B. Aaron should check API Server status with “cpapi status\" from Expert mode. If services are stopped, he should start them with \"cpapi start’.",
+            "C. Aaron should check API Server status with “fwm api status” from Expert mode. If services are stopped, he should start them with “fwm api start”.",
+            "D. Aaron should check API Server status with \"cpm api status” from Expert mode. If services are stopped, he should start them with “cpi api start’."
+        ],
+        "answer": 0,
+        "explanation": "",
+        "id": 2
+    },
+    {
+        "question": "For Management High Availability, which of the following is NOT a valid synchronization status?",
+        "options": [
+            "A. Collision",
+            "B. Lagging",
+            "C. Never been synchronized",
+            "D. Down! "
+        ],
+        "answer": 3,
+        "explanation": "D (78%) A (22%)",
+        "id": 3
+    },
+    {
+        "question": "If the Active Security Management Server falls or if it becomes necessary to change the Active to Standby, the following steps must be taken to prevent data loss.  Providing the Active Security Management Server is responsive, which if these steps should NOT be performed:",
+        "options": [
+            "A. Rename the hostname of the Standby member to match exactly the hostname of the Active member.",
+            "B. Change the Active Security Management Server to Standby.",
+            "C. Manually synchronize the Active and Standby Security Management Servers.",
+            "D. Change the Standby Security Management Server to Active."
+        ],
+        "answer": 0,
+        "explanation": "A (70%) C (20%)",
+        "id": 4
+    },
+    {
+        "question": "What should the admin do in case the Primary Management Server is temporary down?",
+        "options": [
+            "A. Run the ‘promote_util’ to activate the Secondary Management server.",
+            "B. The Secondary will take over automatically. Change the IP in SmartConsole to logon to the private IP of the Secondary Management Server.",
+            "C. Use the VIP in SmartConsole you always reach the active Management Server.",
+            "D. Logon with SmartConsole to the Secondary Management Server and choose ‘Make Active’ under Actions in the HA Management Menu. "
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 5
+    },
+    {
+        "question": "Alice & Bob are going to use Management Data Plane Separation and therefore the routing separation needs to be enabled. Which of the following command is true for enabling the Management Data Plane Separation (MDPS):",
+        "options": [
+            "A. set mdps split brain on",
+            "B. set mdps data plane off",
+            "C. set mdps mgmt plane on",
+            "D. set mdps split plane on"
+        ],
+        "answer": 2,
+        "explanation": "",
+        "id": 6
+    },
+    {
+        "question": "Check Point Management (cpm) is the main management process in that it provides the architecture for a consolidated management console. It empowers the migration from legacy Client-side logic to Server-side logic. The cpm process",
+        "options": [
+            "A. Performs database tasks such as creating, deleting, and modifying objects and compiling policy. ",
+            "B. Allows SmartConsole to communicate over TCP Port 19001",
+            "C. Performs database tasks such as creating, deleting, and modifying objects and indexing logs",
+            "D. Allows SmartConsole to communicate over TCP Port 18190"
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 7
+    },
+    {
+        "question": "Which Check Point daemon invokes and monitors critical processes and attempts to restart them if they fail?",
+        "options": [
+            "A. cpm",
+            "B. cpwd",
+            "C. fwm",
+            "D. cpd"
+        ],
+        "answer": 1,
+        "explanation": "B (100%)",
+        "id":8
+    },
+    {
+        "question": "John is using Management H",
+        "options": [
+            "A. Which Security Management Server should he use for making changes?  A. Primary Log Server",
+            "B. connect virtual IP of Smartcenter HA",
+            "C. active SmartConsole 4",
+            "D. secondary Smartcenter"
+        ],
+        "answer": 2,
+        "explanation": "C (100%)",
+        "id": 9
+    },
+    {
+        "question": "What is the biggest benefit of policy layers?",
+        "options": [
+            "A. To break one policy into several virtual policies.",
+            "B. To include Threat Prevention as a sub policy for the firewall policy",
+            "C. Policy Layers and Sub-Policies enable flexible control over the security policy",
+            "D. They improve the performance on OS kernel version 3.0"
+        ],
+        "answer": 2,
+        "explanation": "",
+        "id": 10
+    },
+    {
+        "question": "What is “Accelerated Policy Installation’?",
+        "options": [
+            "A. Starting R81, the QoS Policy installation process is accelerated thereby reducing the duration of the process significantly",
+            "B. Starting in R81, the Threat Prevention Policy installation process is accelerated thereby reducing the duration of the process significantly",
+            "C. Starting R81, the Desktop Security Policy installation process is accelerated thereby reducing the duration of the process significantly",
+            "D. Starting R81, the Access Control Policy installation process is accelerated thereby reducing the duration of the process significantly"
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 11
+    },
+    {
+        "question": "Name the authentication method that requires token authenticator.",
+        "options": [
+            "A. SecurelD",
+            "B. DynamiclD",
+            "C. Radius",
+            "D. TACACS"
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 12
+    },
+    {
+        "question": "Fill in the blank. With the User Directory Software Blade, you can create user definitions on a(n) Server.",
+        "options": [
+            "A. SecurlD",
+            "B. NT domain",
+            "C. LDAP",
+            "D. SMTP"
+        ],
+        "answer": 2,
+        "explanation": "C (100%)",
+        "id": 13
+    },
+    {
+        "question": "Access roles allow the firewall administrator to configure network access according to:",
+        "options": [
+            "A. acombination of computer or computer groups and networks.",
+            "B. All of the above.",
+            "C. remote access clients.",
+            "D. users and user groups."
+        ],
+        "answer": 1,
+        "explanation": "B (100%)",
+        "id": 14
+    },
+    {
+        "question": "Which of the following is NOT a type of Endpoint Identity Agent?",
+        "options": [
+            "A. Custom",
+            "B. Full",
+            "C. Terminal",
+            "D. Light"
+        ],
+        "answer": 2,
+        "explanation": "C (100%)",
+        "id": 15
+    },
+    {
+        "question": "What object type would you use to grant network access to an LDAP user group?",
+        "options": [
+            "A. Access Role",
+            "B. Group Template",
+            "C. SmartDirectory Group",
+            "D. User Group"
+        ],
+        "answer": 0,
+        "explanation": "A (67%) D (33%",
+        "id": 16
+    },
+    {
+        "question": "Which Identity Source(s) should be selected in Identity Awareness for when there is a requirement for a higher level of security for sensitive servers?",
+        "options": [
+            "A. Endpoint Identity Agent and Browser-Based Authentication",
+            "B. AD Query",
+            "C. Terminal Servers Endpoint Identity Agent",
+            "D. RADIUS and Account Logon"
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 17
+    },
+    {
+        "question":"Which file contains the host address to be published, the MAC address that needs to be associated with the API address, and the unique IP of the interface that responds to ARP request?",
+        "options": [
+            "A. opt/CP-shrd-R80/conf/local.arp",
+            "B. SFWDIR/conf/local.arp",
+            "C. SCPDIR/conf/local.arp",
+            "D. /var/opt/CPshrd-R80/conf/local.arp"
+        ],
+        "answer": 1,
+        "explanation": "B",
+        "id": 18
+    },
+    {
+        "question": "Which command shows only the table names of all kernel tables?",
+        "options": [
+            "A. fw tab -t",
+            "B. fw tab -n",
+            "C. fw tab -s",
+            "D. fw tab -k"
+        ],
+        "answer": 2,
+        "explanation": "C (88%) 13%",
+        "id": 19
+    },
+    {
+        "question": "Which command lists all tables in Gaia?",
+        "options": [
+            "A. fw tab -s",
+            "B. fw tab -list",
+            "C. fw tab -t",
+            "D. fw tab -I"
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 20
+    },
+    {
+        "question": "Which command is used to display status information for various components?",
+        "options": [
+            "A. show sysenrv all ",
+            "B. show all systems",
+            "C. show system messages",
+            "D. sysmess all"
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 21
+    },
+    {
+        "question": "Where is the license for Check Point Module users installed?",
+        "options": [
+            "A. The Primary Gateway",
+            "B. The Standby Gateway",
+            "C. The Endpoint Server",
+            "D. The Security Management Server"
+        ],
+        "answer": 3,
+        "explanation": "D (86%) 14%",
+        "id": 22
+    },
+    {
+        "question": "Secure Configuration Verification (SCV) makes sure that remote access client computers are configured in accordance with the enterprise Security Policy. Bob was asked by Alice to implement a specific SCV configuration but therefore Bob needs to edit and configure a specific Check Point file. Which location file and directory is true?",
+        "options": [
+            "A. SCPDIR/conf/client.sve",
+            "B. SFWDIR/conf/local.scv ",
+            "C. SCPDIR/conf/local.scv",
+            "D. SFWDIR/conf/client.scv"
+        ],
+        "answer": 1,
+        "explanation": "B (100%)",
+        "id": 23
+    },
+    {
+        "question": "There are multiple types of licenses for the various VPN components and types. License type related to management and functioning of Remote Access VPNs are - which of the following license requirement statement is NOT true:",
+        "options": [
+            "A. IPSecVPNLicense » This license is installed on the VPN Gateway and is a basic requirement for a Remote Access VPN solution",
+            "B. EndpointPolicyManagementLicense » The Endpoint Security Suite includes blades other than the Remote Access VPN, hence this license is required to manage the suite",
+            "C. EndpointContainerLicense » The Endpoint Software Blade Licenses does not require an Endpoint Container License as the base",
+            "D. MobileAccessLicense » This license is required on the Security Gateway for the following Remote Access solutions"
+        ],
+        "answer": 2,
+        "explanation": "C (100%)",
+        "id": 24
+    },
+    {
+        "question": "You want to allow your Mobile Access Users to connect to an internal file share. Adding the Mobile Application ‘File Share’ to your Access  Control Policy in the SmartConsole didn’t work. You will be only allowed to select Services for the ‘Service & Application’ column. How to fix it?",
+        "options": [
+            "A. The Mobile Access Blade is not enabled under Gateway properties.",
+            "B. The Mobile Access Blade is not enabled for the Access Control Layer of the policy.",
+            "C. A Quantum Spark Appliance is selected as Installation Target for the policy packet.",
+            "D. The Mobile Access Policy Source under Gateway properties is set to Legacy Policy and not to Unified Access Policy"
+        ],
+        "answer": 1,
+        "explanation": "B (100%)",
+        "id": 25
+    },
+    {
+        "question": "Which of the following authentication methods ARE NOT used for Mobile Access?",
+        "options": [
+            "A. SecurlD",
+            "B. TACACS+",
+            "C. RADIUS server",
+            "D. Username and password (internal, LDAP)"
+        ],
+        "answer": 1,
+        "explanation": "B (100%)",
+        "id": 26
+    },
+    {
+        "question": "Which of the following type of authentication on Mobile Access can NOT be used as the first authentication method?",
+        "options": [
+            "A. Username and Password",
+            "B. Dynamic ID",
+            "C. RADIUS",
+            "D. Certificate"
+        ],
+        "answer": 1,
+        "explanation": "B (100%)",
+        "id": 27
+    },
+    {
+        "question": "In what way are SSL VPN and IPSec VPN diferent?",
+        "options": [
+            "A. IPSec VPN uses an additional virtual adapter, SSL VPN uses the client network adapter only.",
+            "B. SSLVPN is using HTTPS in addition to IKE, whereas IPSec VPN is clientless",
+            "C. IPSec VPN does not support two factor authentication, SSL VPN does support this",
+            "D. SSLVPN adds an extra VPN header to the packet, IPSec VPN does not"
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 28
+    },
+    {
+        "question": "Alice was asked by Bob to implement the Check Point Mobile Access VPN blade — therefore are some basic configuration steps required - which statement about the configuration steps is true?",
+        "options": [
+            "A. 1. Add a rule in the Access Control Policy and install policy  2. Configure Mobile Access parameters in Security Gateway object  3. Enable Mobile Access blade on the Security Gateway object and complete the wizard 4. Connect to the Mobile Access Portal",
+            "B. 1. Connect to the Mobile Access Portal  2. Enable Mobile Access blade on the Security Gateway object and complete the wizard 3. Configure Mobile Access parameters in Security Gateway object  4. Add a rule in the Access Control Policy and install policy",
+            "C. 1. Configure Mobile Access parameters in Security Gateway object  2. Enable Mobile Access blade on the Security Gateway object and complete the wizard 3 Add a rule in the Access Control Policy and install policy  4. Connect to the Mobile Access Portal",
+            "D. 1. Enable Mobile Access blade on the Security Gateway object and complete the wizard 2. Configure Mobile Access parameters in Security Gateway object  3. Add a rule in the Access Control Policy and install policy  4. Connect to the Mobile Access Portal"
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 29
+    },
+    {
+        "question": "Which 3 types of tracking are available for Threat Prevention Policy?",
+        "options": [
+            "A. None, Log, Syslog",
+            "B. Alert, SNMP trap, Mail",
+            "C. SMS Alert, Log, SNMP alert",
+            "D. Syslog, None, User-defined scripts"
+        ],
+        "answer": 1,
+        "explanation": "B (100%)",
+        "id": 30
+    },
+    {
+        "question": "Which SmartEvent component is responsible to collect the logs from different Log Servers?",
+        "options": [
+            "A. SmartEvent Database",
+            "B. SmartEvent Collector",
+            "C. SmartEvent Correlation Unit",
+            "D. SmartEvent Server"
+        ],
+        "answer": 2,
+        "explanation": "C (100%)",
+        "id": 31
+    },
+    {
+        "question": "Please, choose the path to monitor the compliance status of the Check Point Security Management.",
+        "options": [
+            "A. Logs Monitor -> New Tab -> Open compliance View",
+            "B. Security Policies -> New Tab —-> Compliance View",
+            "C. Compliance blade not available under R80.10",
+            "D. Gateways Servers -> Compliance View"
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 32
+    },
+    {
+        "question": "You need to change the number of firewall instances used by CoreXL. How can you achieve this goal?",
+        "options": [
+            "A. cpconfig; reboot not required",
+            "B. edit fwaffinity.conf; reboot not required",
+            "C. cpconfig; reboot required",
+            "D. edit fwaffinity.conf; reboot required"
+        ],
+        "answer": 2,
+        "explanation": "C (100%)",
+        "id": 33
+    },
+    {
+        "question": "Due to high CPU workload on the Security Gateway, the security administrator decided to purchase a new multicore CPU to replace the existing single core CPU. After installation, is the administrator required to perform any additional tasks?",
+        "options": [
+            "A. Run cprestart from clish",
+            "B. After upgrading the hardware, increase the number of kernel instances using cpconfig",
+            "C. Administrator does not need to perform any task. Check Point will make use of the newly installed CPU and Cores",
+            "D. Hyperthreading must be enabled in the bios to use CoreXL."
+        ],
+        "answer": 1,
+        "explanation": "B (100%)",
+        "id": 34
+    },
+    {
+        "question": "Bob is asked by Alice to disable the SecureXL mechanism temporary for further diagnostic by their Check Point partner. Which of the following Check Point Command is true:",
+        "options": [
+            "A. fwaccel templates",
+            "B. fwaccel suspend",
+            "C. fwaccel standby",
+            "D. fwaccel off"
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 35
+    },
+    {
+        "question": "If SecureXL is disabled which path is used to process traffic?",
+        "options": [
+            "A. Passive path",
+            "B. Firewall path",
+            "C. Medium path",
+            "D. Accelerated path"
+        ],
+        "answer": 1,
+        "explanation": "B (100%)",
+        "id": 36
+    },
+    {
+        "question": "Which of the following Central Deployment is NOT a limitation in R81.20 SmartConsole?",
+        "options": [
+            "A. Security Gateways/Clusters is ClusterXL HA new mode",
+            "B. Dedicated Log Server",
+            "C. Security Gateway Clusters in Load Sharing mode",
+            "D. Dedicated SmartEvent Server"
+        ],
+        "answer": 0,
+        "explanation": "A (80%) C (20%",
+        "id": 37
+    },
+    {
+        "question": "Matt wants to upgrade his old Security Management Server to R81.x using the Advanced Upgrade with Database Migration. What is one of the requirements for a successful upgrade?",
+        "options": [
+            "A. Size of the /var/log folder of the source machine must be at least 25% of the size of the /var/log directory on the target machine",
+            "B. Size of the SFWDIR/log folder of the target machine must be a least 25% of the size of the SFWDIR/log directory on the source machine",
+            "C. Size of the /var/log folder of the target machine must be 25GB or more",
+            "D. Se of the /var/log folder of the target machine must be at least 25% of the size of the /var/log directory on the source machine"
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 38
+    },
+    {
+        "question": "Which of the following is true regarding the Proxy ARP feature for Manual NAT?",
+        "options": [
+            "A. The local.arp file must always be configured ",
+            "B. Automatic proxy ARP configuration can be enabled",
+            "C. fw ctl proxy should be configured",
+            "D. Translate Destination on Client Side should be configured"
+        ],
+        "answer": 0,
+        "explanation": "A (60%) B (40%)",
+        "id": 39
+    },
+    {
+        "question": "What is the recommended number of physical network interfaces in a Mobile Access cluster deployment?",
+        "options": [
+            "A. 2 Interfaces - a data interface leading to the organization and the Internet, a second interface for synchronization",
+            "B. 3 Interfaces - an interface leading to the organization, a second interface leading to the internet, a third interface for synchronization .",
+            "C. 4 Interfaces - an interface leading to the organization, a second interface leading to the internet, a third interface for synchronization, a fourth interface leading to the Security Management Server",
+            "D. 1 interface - an interface leading to the organization and the Internet, and configure for synchronization"
+        ],
+        "answer": 1,
+        "explanation": "B (100%)",
+        "id": 40
+    },
+    {
+        "question": "Bob is going to prepare the import of the exported R81.10 management database. Now he wants to verify that the installed tools on the new target security management machine are able to handle the R81.10 release. Which of the following Check Point command is true?",
+        "options": [
+            "A. SFWDIR/scripts/migrate_server print_installed_tools -v R77.30",
+            "B. SCPDIR/scripts/migrate_server print_installed_tools -v R81.10",
+            "C. SFWDIR/scripts/migrate_server print_uninstalled_tools -v R81.10",
+            "D. SFWDIR/scripts/migrate_server print_installed_tools -v R81.10"
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 41
+    },
+    {
+        "question": "The Firewall Administrator is required to create 100 new host objects with different IP addresses. What API command can he use in the script to achieve the requirement?",
+        "options": [
+            "A. add hostname ip-address",
+            "B. set hostname ip-address",
+            "C. set host name ip-address",
+            "D. mgmt_cli-m add host name ip-address "
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 42
+    },
+    {
+        "question": "Which of the following is NOT an identity source used for Identity Awareness?",
+        "options": [
+            "A. Remote Access",
+            "B. UserCheck",
+            "C. RADIUS",
+            "D. AD Query"
+        ],
+        "answer": 1,
+        "explanation": "B (100%)",
+        "id": 43
+    },
+    {
+        "question": "There are 4 ways to use the Management API for creating host object with the Management API. Which one is NOT correct?",
+        "options": [
+            "A. Using cpconfig",
+            "B. Using CLISH",
+            "C. Using SmartConsole GUI console",
+            "D. Using Web Services"
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 44
+    },
+    {
+        "question": "What is a feature that enables VPN connections to successfully maintain a private and secure VPN session without employing Stateful Inspection?",
+        "options": [
+            "A. VPN Routing Mode",
+            "B. Stateless Mode",
+            "C. Stateful Mode",
+            "D. Wire Mode!"
+        ],
+        "answer": 3,
+        "explanation": "D (83%) B (17%)",
+        "id": 45
+    },
+    {
+        "question": "The Check Point installation history feature in provides the following:",
+        "options": [
+            "A. View install changes and install specific version.",
+            "B. Policy Installation Date, view install changes and install specific version",
+            "C. Policy Installation Date only",
+            "D. View install changes"
+        ],
+        "answer": 1,
+        "explanation": "B (100%)",
+        "id": 46
+    },
+    {
+        "question": "Bob has finished to setup provisioning a secondary security management server. Now he wants to check if the provisioning has been correct. Which of the following Check Point command can be used to check if the security management server has been installed as a primary or a  secondary security management server?",
+        "options": [
+            "A. cpprod_util MgmtlsPrimary",
+            "B. cpprod_util FwlsSecondary",
+            "C. cpprod_util FwlsPrimary",
+            "D. cpprod_util MgmtlsSecondary"
+        ],
+        "answer": 2,
+        "explanation": "C (100%)",
+        "id": 47
+    },
+    {
+        "question": "Connections to the Check Point R80 Web API use what protocol?",
+        "options": [
+            "A. SIC",
+            "B. SOAP",
+            "C. HTTPS",
+            "D. HTTP"
+        ],
+        "answer": 2,
+        "explanation": "C (100%)",
+        "id": 48
+    },
+    {
+        "question": "How can you see historical data with cpview?",
+        "options": [
+            "A. cpview -e",
+            "B. cpview -d",
+            "C. cpview -f",
+            "D. cpview -t"
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 49
+    },
+    {
+        "question": "The “fw monitor” tool can be best used to troubleshoot",
+        "options": [
+            "A. FWD issues",
+            "B. Authentication issues",
+            "C. Logging issues",
+            "D. Network traffic issues"
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 50
+    }
+]

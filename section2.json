@@ -1,0 +1,602 @@
+[
+    {
+        "question": "The installation of a package via SmartConsole CANNOT be applied on",
+        "options": [
+            "A. A single Security Gateway",
+            "B. A full Security Cluster (All Cluster Members included)",
+            "C. Multiple Security Gateways and/or Clusters",
+            "D. R81.20 Security Management Server"
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 1
+    },
+    {
+        "question": "What is the purpose of the command “ps aux | grep fwd\"?",
+        "options": [
+            "A. You can check whether the IPS default setting is set to Detect or Prevent mode",
+            "B. You can check the Process ID and the processing time of the fwd process. ",
+            "C. You can convert the log file into Post Script format.",
+            "D. You can list all Process IDs for all running services."
+        ],
+        "answer": 1,
+        "explanation": "B (100%)",
+        "id": 2
+    },
+    {
+        "question": "Which of these statements describes the Check Point ThreatCloud?",
+        "options": [
+            "A. Blocks or limits usage of web applications",
+            "B. Prevents or controls access to web sites based on category",
+            "C. A worldwide collaborative security network",
+            "D. Prevents Cloud vulnerability exploits"
+        ],
+        "answer": 2,
+        "explanation": "C (100%)",
+        "id": 3
+    },
+    {
+        "question": "Using Web Services to access the API, which Header Name/Value had to be in the HTTP Post request after the login?",
+        "options": [
+            "A. uuid Universally Unique Identifier",
+            "B. API-Key",
+            "C. user-uid",
+            "D. X-chkp-sid Session Unique Identifier"
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 4
+    },
+    {
+        "question": "What command would show the API server status?",
+        "options": [
+            "A. api status",
+            "B. show api status",
+            "C. cpm status",
+            "D. api restart"
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 5
+    },
+    {
+        "question": "What could NOT be a reason for synchronization issues in a Management HA environment?",
+        "options": [
+            "A. Hardware clocks do not match even with adjustments for different time zones",
+            "B. Accidentally, you have configured unique IP addresses per Management Server which invalidates the CA Certificate ",
+            "C. There is a network connectivity failure between the servers",
+            "D. The products installed on the servers do not match: one device is a Standalone Server while the other is only a Security Management server."
+        ],
+        "answer": 1,
+        "explanation": "B (80%) A (20%",
+        "id": 6
+    },
+    {
+        "question": "What order should be used when upgrading a Management High Availability Cluster?",
+        "options": [
+            "A. Secondary Management, then Primary Management",
+            "B. Active Management, then Standby Management",
+            "C. Standby Management, then Active Management",
+            "D. Primary Management, then Secondary Management"
+        ],
+        "answer": 3,
+        "explanation": "D (86%) 14%",
+        "id": 7
+    },
+    {
+        "question": "You need to see which hotfixes are installed on your Check Point server, which command would you use?",
+        "options": [
+            "A. cpinfo —h all",
+            "B. cpinfo -o hotfix",
+            "C. cpinfo -y all",
+            "D. cpinfo -| hotfix"
+        ],
+        "answer": 2,
+        "explanation": "C (100%)",
+        "id": 8
+    },
+    {
+        "question": "What mechanism can ensure that the Security Gateway can communicate with the Management Server with ease in situations with overwhelmed network resources?",
+        "options": [
+            "A. There is a feature for ensuring stable connectivity to the management server and is done via Priority Queuing.",
+            "B. The corresponding feature is new to R81.10 and is called “Management Data Plane Separation” 4",
+            "C. The corresponding feature is called “Dynamic Split”",
+            "D. The corresponding feature is called “Dynamic Dispatching”"
+        ],
+        "answer": 1,
+        "explanation": "B (67%) A (33%",
+        "id": 9
+    },
+    {
+        "question": "Which process is used mainly for backward compatibility of gateways in R80.x and newer? It provides communication with GUl-client, database manipulation, policy compilation and Management HA synchronization.",
+        "options": [
+            "A. cpm",
+            "B. fwd",
+            "C. cpd",
+            "D. fwm "
+        ],
+        "answer": 3,
+        "explanation": "D (89%) 11%",
+        "id": 10
+    },
+    {
+        "question": "What component of Management is used for indexing?",
+        "options": [
+            "A. fwm",
+            "B. SOLR",
+            "C. API Server",
+            "D. DBSync"
+        ],
+        "answer": 1,
+        "explanation": "B (100%)",
+        "id": 11
+    },
+    {
+        "question": "What is the responsibility of SOLR process on the management server?",
+        "options": [
+            "A. Validating all data before it’s written into the database",
+            "B. It generates indexes of data written to the database |",
+            "C. Communication between SmartConsole applications and the Security Management Server",
+            "D. Writing all information into the database"
+        ],
+        "answer": 1,
+        "explanation": "B (100%)",
+        "id": 12
+    },
+    {
+        "question": "What is the difference between Updatable Objects and Dynamic Objects",
+        "options": [
+            "A. Updatable Objects is a Threat Cloud Service. The provided Objects are updated automatically. Dynamic Objects are created and maintained locally. In both cases there is no need to install policy for the changes to take effect. ",
+            "B. Dynamic Objects are maintained automatically by the Threat Cloud. For Dynamic Objects there is no need to install policy for the changes to take effect. Updatable Objects are created and maintained locally.",
+            "C. Updatable Objects is a Threat Cloud Service. The provided Objects are updated automatically. Dynamic Objects are created and maintained locally. For Dynamic Objects there is no need to install policy for the changes to take effect.",
+            "D. Dynamic Objects are maintained automatically by the Threat Cloud. Updatable Objects are created and maintained locally. In both cases there is no need to install policy for the changes to take effect."
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 13
+    },
+    {
+        "question": "Which process handles connections from SmartConsole R80?",
+        "options": [
+            "A. cpm",
+            "B. cpd",
+            "C. cpmd",
+            "D. fwd"
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 14
+    },
+    {
+        "question": "Identity Awareness allows easy configuration for network access and auditing based on what three items?",
+        "options": [
+            "A. Client machine IP address.",
+            "B. Network location, the identity of a user and the identity of a machine ",
+            "C. Log server IP address.",
+            "D. Gateway proxy IP address."
+        ],
+        "answer": 1,
+        "explanation": "B (100%)",
+        "id": 15
+    },
+    {
+        "question": "Which of the following cannot be configured in an Access Role Object?",
+        "options": [
+            "A. Networks",
+            "B. Machines",
+            "C. Users",
+            "D. Time"
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 16
+    },
+    {
+        "question": "Fill in the blank: RADIUS protocol uses to communicate with the gateway.",
+        "options": [
+            "A. TDP",
+            "B. CCP",
+            "C. HTTP",
+            "D. UDP 4"
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 17
+    },
+    {
+        "question": "Which of the following is NOT a component of a Distinguished Name?",
+        "options": [
+            "A. Common Name",
+            "B. Country",
+            "C. User container",
+            "D. Organizational Unit"
+        ],
+        "answer": 2,
+        "explanation": "C (100%)",
+        "id": 18
+    },
+    {
+        "question": "Using Threat Emulation technologies, what is the best way to block .exe and .bat file types?",
+        "options": [
+            "A. Enable .exe bat protection in IPS Policy",
+            "B. tecli advanced attributes set prohibited_file_types exe, bat 4",
+            "C. create FW rule for particular protocol",
+            "D. enable DLP and select .exe and .bat file type"
+        ],
+        "answer": 1,
+        "explanation": "B (80%) D (20%",
+        "id": 19
+    },
+    {
+        "question": "A user complains that some Internet resources are not available. The Administrator is having issues seeing if packets are being dropped at the firewall (not seeing drops in logs). What is the solution to troubleshoot the issue?",
+        "options": [
+            "A. run “fw ctl zdebug drop” on the relevant gateway",
+            "B. run “cpstop” on the relevant gateway and check the ping again",
+            "C. run “fw unloadlocal” on the relevant gateway and check the ping again",
+            "D. run “fw log” on the relevant gateway"
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 20
+    },
+    {
+        "question": "Which command will reset the kernel debug options to default settings?",
+        "options": [
+            "A. fw ctl dbg -a 0",
+            "B. fw ctl debug set 0",
+            "C. fw ctl debug 0",
+            "D. fw ctl dbg resetall"
+        ],
+        "answer": 2,
+        "explanation": "C (100%)",
+        "id": 21
+    },
+    {
+        "question": "Which Operating Systems are supported for the Endpoint Security VPN?",
+        "options": [
+            "A. Windows and Red Hat Linux",
+            "B. Windows and SPARC Solaris",
+            "C. Windows and x86 Solaris",
+            "D. Windows and macOS computers"
+        ],
+        "answer": 3,
+        "explanation": "",
+        "id": 22
+    },
+    {
+        "question": "Alice knows about the Check Point Management HA installation from Bob and needs to know which Check Point Security Management Server is currently capable of issuing and managing certificate. Alice uses the Check Point command “cpconfig” to run the Check Point Security Management Server configuration tool on both Check Point Management HA instances “Primary & Secondary”. Which configuration option does she need to look for?",
+        "options": [
+            "A. Certificate's Fingerprint",
+            "B. Random Pool",
+            "C. Certificate Authority |",
+            "D. CA Authority"
+        ],
+        "answer": 2,
+        "explanation": "C (100%)",
+        "id": 23
+    },
+    {
+        "question": "Is it possible to establish a VPN before the user login to the Endpoint Client.",
+        "options": [
+            "A. Yes, you had to set neo_remember_user_password to true in the trac.defaults of the Remote Access Client or you can use the endpoint_vpn_remember_user_password attribute in the trac_client_1.ttm file located in the SFWDIR/conf directory on the Security Gateway",
+            "B. Yes, you had to set neo_always_connected to true in the trac.defaults of the Remote Access Client or you can use the endpoint_vpn_always_connected attribute in the trac_client_1.ttm file located in the SFWDIR/conf directory on the Security Gateway",
+            "C. No, the user must login first.",
+            "D. Yes, you have to enable Machine Authentication in the Gateway object of the Smart Console "
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 24
+    },
+    {
+        "question": "Mobile Access Gateway can be configured as a reverse proxy for Internal Web Applications. Reverse proxy users browse to a URL that is resolved to the Security Gateway IP address. Which of the following Check Point command is true for enabling the Reverse Proxy:",
+        "options": [
+            "A. ReverseProxy",
+            "B. ReverseCLIProxy",
+            "C. ReverseProxyCLl",
+            "D. ProxyReverseCL|"
+        ],
+        "answer": 2,
+        "explanation": "C (86%) 14%",
+        "id": 25
+    },
+    {
+        "question": "Capsule Connect and Capsule Workspace both offer secured connection for remote users who are using their mobile devices. However, there are differences between the two. Which of the following statements correctly identify each product's capabilities?",
+        "options": [
+            "A. For compliance/host checking, Workspace offers the MDM cooperative enforcement, whereas Connect offers both jailbreak/root detection and MDM cooperative enforcement.",
+            "B. Workspace can support any application, whereas Connect has a limited number of application types which it will support",
+            "C. Workspace supports iOS, Android, and WP8, whereas Connect supports iOS and Android only",
+            "D. For credential protection, Connect uses One-time Password login support, but has no SSO support, whereas Workspace offers both One-Time Password login support as well as SSO for specific applications."
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 26
+    },
+    {
+        "question": "What are the two modes for SNX (SSL Network Extender)?",
+        "options": [
+            "A. Network Mode and Hub Mode",
+            "B. Network Mode and Application Mode!",
+            "C. Visitor Mode and Office Mode",
+            "D. Office Mode and Hub Moe"
+        ],
+        "answer": 1,
+        "explanation": "B (100%)",
+        "id": 27
+    },
+    {
+        "question": "Native Applications require a thin client under which circumstances?",
+        "options": [
+            "A. If you want to have assigned a particular Office Mode IP address",
+            "B. If you are about to use a client (FTP, RDP...) that is installed on the endpoint. ",
+            "C. If you want to use a VPN Client that is not officially supported by the underlying operating system",
+            "D. If you want to use a legacy 32-Bit Windows OS"
+        ],
+        "answer": 1,
+        "explanation": "B (100%)",
+        "id": 28
+    },
+    {
+        "question": "In SmartConsole, where do you manage your Mobile Access Policy?",
+        "options": [
+            "A. Through the Mobile Console",
+            "B. Shared Gateways Policy",
+            "C. From the Dedicated Mobility Tab",
+            "D. Smart Dashboard"
+        ],
+        "answer": 3,
+        "explanation": "D (60%) C (40%)",
+        "id": 29
+    },
+    {
+        "question": "You have used the SmartEvent GUI to create a custom Event policy. What is the best way to display the correlated Events generated by SmartEvent Policies?",
+        "options": [
+            "A. Inthe SmartConsole / Logs & Monitor -> open the Logs View and use type:Correlated as query filter.",
+            "B. Select the Events tab in the SmartEvent GUI or use the Events tab in the SmartView web interface.",
+            "C. Open SmartView Monitor and select the SmartEvent Window from the main menu.",
+            "D. In the SmartConsole / Logs & Monitor -> open a new Tab and select External Apps / SmartEvent."
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 30
+    },
+    {
+        "question": "When detected, an event can activate an Automatic Reaction. The SmartEvent administrator can create and configure one Automatic  Reaction, or many, according to the needs of the system. Which of the following statement is false and NOT part of possible automatic reactions:",
+        "options": [
+            "A. Syslog",
+            "B. SNMP Trap",
+            "C. Mail",
+            "D. Block Source"
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 31
+    },
+    {
+        "question": "What are possible Automatic Reactions in SmartEvent?",
+        "options": [
+            "A. Web Mail, Forward to SandBlast Appliance, SNMP Trap, External Script",
+            "B. Web Mail, Block Service, SNMP Trap, SmartTask, Geo Protection",
+            "C. Web Mail, Block Destination, SNMP Trap, SmartTask",
+            "D. Mail, SNMP Trap, Block Source, Block Event Activity, External Script!"
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 32
+    },
+    {
+        "question": "Which command can you use to enable or disable multi-queue per interface?",
+        "options": [
+            "A. Cpmqueue set",
+            "B. Set cpmgq enable",
+            "C. Cpmq config",
+            "D. cpmq set "
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 33
+    },
+    {
+        "question": "What is Dynamic Balancing?",
+        "options": [
+            "A. lt is a feature that uses a daemon to balance the required number of firewall instances and SNDs based on the current load",
+            "B. It is a ClusterXL feature that switches an HA cluster into an LS cluster if required to maximize throughput.",
+            "C. It is a CoreXL feature that assigns the SND to network interfaces to balance the RX Cache of the interfaces",
+            "D. It is a new feature that is capable of dynamically reserve the amount of Hash kernel memory to reflect the resource usage necessary for maximizing the session rate."
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 34
+    },
+    {
+        "question": "Which is the command to identify the NIC driver before considering about the employment of the Multi-Queue feature?",
+        "options": [
+            "A. ip show int ethO",
+            "B. show interface ethO mq",
+            "C. ifconfig -i ethO verbose",
+            "D. ethtool -i eth0"
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 35
+    },
+    {
+        "question": "What is the minimum number of CPU cores required to enable CoreXL?",
+        "options":[
+            "A. 2",
+            "B. 1",
+            "C. 4",
+            "D. 6"
+        ],
+        "answer": 0,
+        "explanation": "B (100%)",
+        "id":36
+    },
+    {
+        "question": "What does Backward Compatibility mean upgrading the Management Server and how can you check it?",
+        "options": [
+            "A. The Management Server is able to manage older Gateways. The lowest supported version in the Installation and Upgrade Guide",
+            "B. The Management Server is able to manage older Gateways. The lowest supported version is documented in the Release Notes .",
+            "C. You will be able to connect to older Management Server with the SmartConsole. The lowest supported version is documented in the Release Notes",
+            "D. You will be able to connect to older Management Server with the SmartConsole. The lowest supported version is documented in the Installation and Upgrade Guide"
+        ],
+        "answer": 1,
+        "explanation": "B (100%)",
+        "id": 37
+    },
+    {
+        "question": "How can you switch the active log file?",
+        "options": [
+            "A. Run fw logswitch on the Management Server",
+            "B. Run fwm logswitch on the Management Server",
+            "C. Run fw logswitch on the gateway",
+            "D. Run fwm logswitch on the gateway"
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 38
+    },
+    {
+        "question": "What destination versions are supported for a Multi-Version Cluster Upgrade?",
+        "options": [
+            "A. R77.30 and later",
+            "B. R80.10 and Later",
+            "C. R70 and Later",
+            "D. R76 and later"
+        ],
+        "answer": 1,
+        "explanation": "B (50%) A (50%)",
+        "id": 39
+    },
+    {
+        "question": "Which command can you use to verify the number of active concurrent connections?",
+        "options": [
+            "A. fw conn all",
+            "B. show all connections",
+            "C. fw ctl pstat",
+            "D. show connections"
+        ],
+        "answer": 2,
+        "explanation": "C (100%)",
+        "id": 40
+    },
+    {
+        "question": "Under which file is the proxy arp configuration stored?",
+        "options": [
+            "A. SFWDIR/state/_tmp/proxy.arp on the security gateway",
+            "B. SFWDIR/conf/local.arp on the management server",
+            "C. SFWDIR/conf/local.arp on the gateway 4",
+            "D. SFWDIR/state/proxy_arp.conf on the management server"
+        ],
+        "answer": 2,
+        "explanation": "C (100%)",
+        "id": 41
+    },
+    {
+        "question": "What are the correct steps upgrading a HA cluster (M1 is active, M2 is passive) using Multi-Version Cluster(MVC)Upgrade?",
+        "options": [
+            "A. 1) In SmartConsole, change the version of the cluster object  2) Upgrade the passive node M2 to R81.20  3) Enable the MVC mechanism on the upgraded R81.20 Cluster Member M2 in CLISH: set cluster member mvc on  4) Install the Access Control Policy and make sure that the installation will not stop if installation on one cluster member fails  5) After examine the cluster states upgrade node M1 to R81.20  6) On each Cluster Member, disable the MVC mechanism and Install the Access Control Policy SmartConsole, change the version of the cluster object,",
+            "B. 1) Enable the MVC mechanism on both cluster members #cphaprob mvc on  2) Upgrade the passive node M2 to R81.20  3) In SmartConsole, change the version of the cluster object  4) Install the Access Control Policy  5) After examine the cluster states upgrade node M1 to R81.20  6) On each Cluster Member, disable the MVC mechanism and Install the Access Control Policy",
+            "C. 1) Enable the MVC mechanism on both cluster members in CLISH: set cluster member mvc on  2) Upgrade the passive node M2 to R81.20  3) In SmartConsole, change the version of the cluster object  4) Install the Access Control Policy and make sure that the installation will not stop if installation on one cluster member fails 5) After examine the cluster states upgrade node M1 to R81.20  6) On each Cluster Member, disable the MVC mechanism",
+            "D. 1) Upgrade the passive node M2 to R81.20  2) Enable the MVC mechanism on the upgraded R81.20 Cluster Member M2 #cphaconf mvc on  3) In SmartConsole, change the version of the cluster object  4) Install the Access Control Policy  5) After examine the cluster states upgrade node M1 to R81.20  6) On each Cluster Member, disable the MVC mechanism and Install the Access Control Policy upgrade the passive node M2 to R81.20"
+        ],
+        "answer": 0,
+        "explanation": "A (67%) C (33%",
+        "id": 42
+    },
+    {
+        "question": "You pushed a policy to your gateway, and you cannot access the gateway remotely anymore. What command should you use to remove the policy from the gateway by logging in through console access?",
+        "options": [
+            "A. “fw unloadpolicy”",
+            "B. “fw unloadlocal’” ",
+            "C. “fw cpstop”",
+            "D. “fw undo”"
+        ],
+        "answer": 1,
+        "explanation": "B (100%)",
+        "id": 43
+    },
+    {
+        "question": "Which command would disable a Cluster Member permanently?",
+        "options": [
+            "A. clusterXL_admin_down",
+            "B. cphaprob_admin down",
+            "C. clusterXL_admin down -p",
+            "D. set clusterXL down -p"
+        ],
+        "answer": 2,
+        "explanation": "C (100%)",
+        "id": 44
+    },
+    {
+        "question": "While using the Gaia CLI, what is the correct command to publish changes to the management server?",
+        "options": [
+            "A. json publish",
+            "B. mgmt publish",
+            "C. mgmt._cli commit",
+            "D. commit"
+        ],
+        "answer": 1,
+        "explanation": "B (75%) D (25%",
+        "id": 45
+    },
+    {
+        "question": "The fwd process on the Security Gateway sends logs to the fwd process on the Management Server, where it is forwarded to via",
+        "options": [
+            "A. cpm, cpd",
+            "B. cpwd, fwssd",
+            "C. fwm, cpd",
+            "D. cpd, fwm"
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 46
+    },
+    {
+        "question": "Which TCP port does the CPM process listen on?",
+        "options": [
+            "A. 19009",
+            "B. 18191",
+            "C. 8983",
+            "D. 18190"
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 47
+    },
+    {
+        "question": "What command is used to manually failover a cluster during a zero-downtime upgrade?",
+        "options": [
+            "A. clusterXL_admin down",
+            "B. set cluster member down",
+            "C. cpstop",
+            "D. set clusterXL down"
+        ],
+        "answer": 0,
+        "explanation": "A (100%)",
+        "id": 48
+    },
+    {
+        "question": "Which of the following is an identity acquisition method that allows a Security Gateway to identify Active Directory users and computers?",
+        "options": [
+            "A. UserCheck",
+            "B. User Directory Query",
+            "C. Account Unit Query",
+            "D. Active Directory Query"
+        ],
+        "answer": 3,
+        "explanation": "D (100%)",
+        "id": 49
+    },
+    {
+        "question": "Fill in the blank: Browser-based Authentication sends users to a web page to acquire identities using",
+        "options": [
+            "A. UserCheck",
+            "B. User Directory",
+            "C. Captive Portal and Transparent Kerberos Authentication",
+            "D. Captive Portal "
+        ],
+        "answer": 3,
+        "explanation": "D (75%) C (25%)",
+        "id": 50
+    }
+]

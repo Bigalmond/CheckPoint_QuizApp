@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Quiz App</title>
+    <!-- Vue.js CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* A little custom CSS for smooth transitions */
+        .fade-enter-active, .fade-leave-active {
+            transition: opacity 0.4s ease;
+        }
+        .fade-enter-from, .fade-leave-to {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 flex items-center justify-center min-h-screen p-4">
+
+    <div id="app" class="w-full max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-6 sm:p-8">
+        
+        <!-- ======================= START SCREEN ======================= -->
+        <transition name="fade" mode="out-in">
+            <div v-if="currentScreen === 'start'" key="start">
+                <h1 class="text-3xl font-bold text-slate-700 text-center mb-2">Advanced Quiz App</h1>
+                <p class="text-slate-500 text-center mb-8">Select a mode to begin your quiz.</p>
+
+                <!-- Step 1: Mode Selection -->
+                <div v-if="selectionStep === 1">
+                    <p class="font-semibold text-slate-600 mb-4">Step 1: Choose your quiz mode</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <button @click="selectMode('all')" class="p-4 border-2 rounded-lg hover:bg-blue-50 hover:border-blue-400 transition">All Questions ({{ totalQuestions }})</button>
+                        <button @click="selectMode('section')" class="p-4 border-2 rounded-lg hover:bg-blue-50 hover:border-blue-400 transition">By Section</button>
+                        <button @click="selectMode('scope')" class="p-4 border-2 rounded-lg hover:bg-blue-50 hover:border-blue-400 transition">By Question Range</button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Details Selection -->
+                <div v-if="selectionStep === 2" class="mt-6 pt-6 border-t">
+                    <p class="font-semibold text-slate-600 mb-4">Step 2: Configure your selection</p>
+                    <div v-if="quizConfig.mode === 'section'" class="flex flex-wrap justify-center gap-4">
+                        <button v-for="i in 4" :key="i" @click="selectSection(i)" class="p-4 border-2 rounded-lg hover:bg-blue-50 hover:border-blue-400 transition">Section {{ i }}</button>
+                    </div>
+                    <div v-if="quizConfig.mode === 'scope'" class="flex items-center justify-center gap-4">
+                        <input type="number" v-model.number="quizConfig.start" :placeholder="'Start (1-' + totalQuestions + ')'" class="p-3 w-32 text-center border-2 rounded-lg focus:border-blue-400 outline-none">
+                        <span class="text-slate-500">-</span>
+                        <input type="number" v-model.number="quizConfig.end" :placeholder="'End (1-' + totalQuestions + ')'" class="p-3 w-32 text-center border-2 rounded-lg focus:border-blue-400 outline-none">
+                    </div>
+                </div>
+
+                <!-- Step 3: Order Selection -->
+                <div v-if="selectionStep === 3" class="mt-6 pt-6 border-t">
+                    <p class="font-semibold text-slate-600 mb-4">Step 3: Choose question order</p>
+                    <div class="flex justify-center gap-4">
+                        <button @click="setOrder('ascending')" class="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition">Start in Order</button>
+                        <button @click="setOrder('random')" class="px-6 py-3 bg-slate-700 text-white font-semibold rounded-lg shadow-md hover:bg-slate-800 transition">Start with Random Questions</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ======================= QUIZ SCREEN ======================= -->
+            <div v-else-if="currentScreen === 'quiz'" key="quiz">
+                <div class="min-h-[550px] flex flex-col">
+                    <!-- Progress and Question -->
+                    <div>
+                        <p class="text-center text-slate-500 mb-4">Question {{ currentQuestionIndex + 1 }} of {{ questions.length }} (Global ID: {{ currentQuestion.global_id }})</p>
+                        <h2 class="text-xl sm:text-2xl font-semibold text-slate-800 mb-6 text-left">{{ currentQuestion.question }}</h2>
+                    </div>
+
+                    <!-- Options -->
+                    <div class="flex-grow">
+                        <button v-for="(option, index) in currentQuestion.options" :key="index" @click="selectAnswer(index)"
+                                :disabled="answered"
+                                :class="getOptionClass(index)"
+                                class="w-full text-left p-4 my-2 border-2 rounded-lg transition-colors duration-300 disabled:cursor-not-allowed">
+                            {{ option }}
+                        </button>
+                    </div>
+
+                    <!-- Feedback and Next Button -->
+                    <transition name="fade">
+                        <div v-if="answered" class="mt-6 text-left">
+                            <div class="p-4 rounded-lg" :class="feedback.correct ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'">
+                                <p class="font-bold" :class="feedback.correct ? 'text-green-700' : 'text-red-700'">{{ feedback.text }}</p>
+                                <p v-if="currentQuestion.explanation" class="text-slate-600 mt-2">{{ currentQuestion.explanation }}</p>
+                            </div>
+                            <button @click="nextQuestion" class="w-full mt-4 px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition">
+                                {{ isLastQuestion ? 'Finish Quiz' : 'Next Question' }}
+                            </button>
+                        </div>
+                    </transition>
+                </div>
+            </div>
+
+            <!-- ======================= RESULTS SCREEN ======================= -->
+            <div v-else-if="currentScreen === 'results'" key="results" class="text-center">
+                 <h2 class="text-3xl font-bold text-slate-700 mb-4">Quiz Complete!</h2>
+                 <p class="text-xl text-slate-600 mb-8">You scored {{ score }} out of {{ questions.length }}</p>
+                 <button @click="resetQuiz" class="px-8 py-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition">Back to Main Menu</button>
+            </div>
+        </transition>
+
+    </div>
+
+    <script>
+        const { createApp, ref, computed } = Vue;
+
+        createApp({
+            setup() {
+                // --- State Management ---
+                const currentScreen = ref('start'); // 'start', 'quiz', 'results'
+                const selectionStep = ref(1); // 1, 2, 3 for start screen flow
+                const allQuestionsData = ref([]);
+                const totalQuestions = ref(0);
+
+                const quizConfig = ref({
+                    mode: null,
+                    section_id: null,
+                    start: null,
+                    end: null,
+                    order: null
+                });
+
+                const questions = ref([]);
+                const currentQuestionIndex = ref(0);
+                const score = ref(0);
+                const answered = ref(false);
+                const selectedAnswerIndex = ref(null);
+                
+                // --- Computed Properties ---
+                const currentQuestion = computed(() => questions.value[currentQuestionIndex.value] || {});
+                const isLastQuestion = computed(() => currentQuestionIndex.value === questions.value.length - 1);
+                const feedback = computed(() => {
+                    if (!answered.value) return {};
+                    const correct = selectedAnswerIndex.value === currentQuestion.value.answer;
+                    return {
+                        correct,
+                        text: correct ? 'Correct!' : 'Incorrect.'
+                    };
+                });
+
+                // --- Methods ---
+
+                // Load all data on startup
+                const loadAllData = async () => {
+                    try {
+                        const files = ['section1.json', 'section2.json', 'section3.json', 'section4.json'];
+                        const promises = files.map(file => fetch(file).then(res => res.json()));
+                        const sections = await Promise.all(promises);
+                        
+                        let globalIdCounter = 1;
+                        const combined = [];
+                        sections.forEach((sectionData, index) => {
+                            for (const question of sectionData) {
+                                question.global_id = globalIdCounter++;
+                                question.section = index + 1;
+                                combined.push(question);
+                            }
+                        });
+                        allQuestionsData.value = combined;
+                        totalQuestions.value = combined.length;
+                    } catch (error) {
+                        console.error("Failed to load question files:", error);
+                        alert("Error: Could not load question data. Make sure section1.json, section2.json, etc., are in the same directory as this HTML file.");
+                    }
+                };
+                loadAllData();
+
+                const selectMode = (mode) => {
+                    quizConfig.value.mode = mode;
+                    if (mode === 'all') {
+                        selectionStep.value = 3; // Skip to order selection
+                    } else {
+                        selectionStep.value = 2;
+                    }
+                };
+
+                const selectSection = (sectionId) => {
+                    quizConfig.value.section_id = sectionId;
+                    selectionStep.value = 3;
+                };
+
+                const setOrder = (order) => {
+                    quizConfig.value.order = order;
+                    startQuiz();
+                };
+
+                const startQuiz = () => {
+                    let filtered = [];
+                    const { mode, section_id, start, end, order } = quizConfig.value;
+
+                    if (mode === 'scope') {
+                        if (!start || !end || start < 1 || end > totalQuestions.value || start > end) {
+                            alert(`Invalid range. Please enter numbers between 1 and ${totalQuestions.value}.`);
+                            return;
+                        }
+                    }
+
+                    if (mode === 'all') {
+                        filtered = [...allQuestionsData.value];
+                    } else if (mode === 'section') {
+                        filtered = allQuestionsData.value.filter(q => q.section === section_id);
+                    } else if (mode === 'scope') {
+                        filtered = allQuestionsData.value.filter(q => q.global_id >= start && q.global_id <= end);
+                    }
+
+                    if (order === 'random') {
+                        for (let i = filtered.length - 1; i > 0; i--) {
+                            const j = Math.floor(Math.random() * (i + 1));
+                            [filtered[i], filtered[j]] = [filtered[j], filtered[i]];
+                        }
+                    }
+                    
+                    if (filtered.length === 0) {
+                        alert('No questions found for the selected criteria. Returning to main menu.');
+                        resetQuiz();
+                        return;
+                    }
+
+                    questions.value = filtered;
+                    currentScreen.value = 'quiz';
+                };
+
+                const selectAnswer = (index) => {
+                    if (answered.value) return;
+                    answered.value = true;
+                    selectedAnswerIndex.value = index;
+                    if (index === currentQuestion.value.answer) {
+                        score.value++;
+                    }
+                };
+
+                const nextQuestion = () => {
+                    if (isLastQuestion.value) {
+                        currentScreen.value = 'results';
+                    } else {
+                        currentQuestionIndex.value++;
+                        answered.value = false;
+                        selectedAnswerIndex.value = null;
+                    }
+                };
+                
+                const getOptionClass = (index) => {
+                    if (!answered.value) {
+                        return 'hover:bg-blue-50 hover:border-blue-400';
+                    }
+                    if (index === currentQuestion.value.answer) {
+                        return 'bg-green-100 border-green-400 text-green-800 font-semibold';
+                    }
+                    if (index === selectedAnswerIndex.value) {
+                        return 'bg-red-100 border-red-400 text-red-800';
+                    }
+                    return 'bg-slate-50 border-slate-200 text-slate-500';
+                };
+
+                const resetQuiz = () => {
+                    currentScreen.value = 'start';
+                    selectionStep.value = 1;
+                    questions.value = [];
+                    currentQuestionIndex.value = 0;
+                    score.value = 0;
+                    answered.value = false;
+                    selectedAnswerIndex.value = null;
+                    quizConfig.value = { mode: null, section_id: null, start: null, end: null, order: null };
+                };
+
+                // --- Return state and methods to the template ---
+                return {
+                    currentScreen,
+                    selectionStep,
+                    totalQuestions,
+                    quizConfig,
+                    questions,
+                    currentQuestionIndex,
+                    currentQuestion,
+                    answered,
+                    score,
+                    isLastQuestion,
+                    feedback,
+                    selectMode,
+                    selectSection,
+                    setOrder,
+                    startQuiz,
+                    selectAnswer,
+                    nextQuestion,
+                    getOptionClass,
+                    resetQuiz
+                };
+            }
+        }).mount('#app');
+    </script>
+
+</body>
+</html>
